@@ -6,7 +6,7 @@ Bundler.require(:default, Rails.env)
 
 module Knitly
   class Application < Rails::Application
-    config generators do |g|
+    config.generators do |g|
         g.test_framework :rspec, :fixture => false
     end
   end
