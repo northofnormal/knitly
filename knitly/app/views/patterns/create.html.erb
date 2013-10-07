@@ -1,0 +1,6 @@
+<h1>Create a new pattern</h1>
+<%= simple_form_for @pattern do |x|  %>
+	<%= x.label :tile %>: <%= x.text_field :title %><br>
+	<%= x.label :descript %>: <%= x.text_area :description %>
+
+<% end  %>

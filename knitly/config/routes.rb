@@ -1,7 +1,6 @@
 Knitly::Application.routes.draw do
-  get "pattern/create"
-  get "pattern/index"
-  get "pattern/show"
+
+  resources :patterns
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

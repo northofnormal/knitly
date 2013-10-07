@@ -1,0 +1,12 @@
+<h1>Create a new pattern</h1>
+<div class="form">
+<%= simple_form_for @pattern do |x|  %>
+	<%= x.label :title %>: <%= x.text_field :title %><br>
+	<%= x.label :description %>: <%= x.text_area :description %><br>
+	<%= x.label :gauge %>: <%= x.text_field :gauge %><br>
+	<%= x.label :needles %>: <%= x.text_field :needles %><br>
+	<%= x.label :yarn %>: <%= x.text_field :yarn %>
+<% end  %>
+
+
+</div>
