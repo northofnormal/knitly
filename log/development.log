@@ -11128,3 +11128,52 @@ Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-08 16:00:32 -040
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-08 16:00:32 -0400
+
+
+Started GET "/patterns" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+Processing by PatternsController#index as HTML
+  [1m[36mPattern Load (0.8ms)[0m  [1mSELECT "patterns".* FROM "patterns"[0m
+  Rendered patterns/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/pattern.css?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/pattern.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-08 16:14:03 -0400
+
+
+Started GET "/patterns/18" for 127.0.0.1 at 2013-10-08 16:19:34 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPattern Load (0.5ms)[0m  SELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mStep Load (0.8ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1[0m  [["pattern_id", 18]]
+  Rendered patterns/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/patterns/19" for 127.0.0.1 at 2013-10-08 16:19:37 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPattern Load (0.5ms)[0m  SELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1  [["id", "19"]]
+  [1m[36mStep Load (0.5ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1[0m  [["pattern_id", 19]]
+  Rendered patterns/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.0ms)
