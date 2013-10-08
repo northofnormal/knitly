@@ -4,10 +4,10 @@ class PatternsController < ApplicationController
   end
 
   def create
-	 	@pattern = Pattern.new(params.requie(:pattern).permit(:title, :description, :gauge, :needles, :yarn))
+	 	@pattern = Pattern.new(params.require(:pattern).permit(:title, :description, :gauge, :needles, :yarn))
 
 	 		if @pattern.save
-	 			redirect_to pattern_url
+	 			redirect_to patterns_path
 	 		else
 	 			render "create"
 	 		end
