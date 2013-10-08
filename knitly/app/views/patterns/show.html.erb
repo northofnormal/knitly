@@ -1,1 +1,10 @@
 <h1><%= @pattern.title %></h1>
+<p><%= @pattern.description %></p>
+<p>Yarn: <%= @pattern.yarn %><br>
+Needles: <%= @pattern.needles %><br>
+Gauge: <%= @pattern.gauge %></p>
+
+<%= @pattern.steps.each do |step| %>
+  <p><%= step.order %><br>
+     <%= step.action %></p>
+<% end %>

@@ -20,4 +20,10 @@ class PatternsController < ApplicationController
   def show
   	@pattern = Pattern.find(params[:id])
   end
+
+  private
+
+  def pattern_params
+    
+  end
 end
