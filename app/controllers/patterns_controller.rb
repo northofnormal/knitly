@@ -4,7 +4,7 @@ class PatternsController < ApplicationController
   end
 
   def create
-	 	@pattern = Pattern.new(params.require(:pattern).permit(:title, :description, :gauge, :needles, :yarn))
+	 	@pattern = Pattern.new(pattern_params)
 
 	 		if @pattern.save
 	 			redirect_to patterns_path
@@ -24,6 +24,6 @@ class PatternsController < ApplicationController
   private
 
   def pattern_params
-    
+    params.require(:pattern).permit(:title, :description, :gauge, :needles, :yarn, steps_attributes: [:id, :order, :position, :action, :_destroy])
   end
 end

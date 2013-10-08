@@ -4,7 +4,7 @@
 Needles: <%= @pattern.needles %><br>
 Gauge: <%= @pattern.gauge %></p>
 
-<%= @pattern.steps.each do |step| %>
+<% @pattern.steps.each do |step| %>
   <p><%= step.order %><br>
      <%= step.action %></p>
 <% end %>
