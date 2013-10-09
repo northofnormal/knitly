@@ -4,11 +4,39 @@
 Needles: <%= @pattern.needles %><br>
 Gauge: <%= @pattern.gauge %></p>
 
-<% @pattern.steps.each do |step| %>
-  <p><%= step.action %></p>
+<div id="full_pattern">
+<% @pattern.steps.each_with_index do |step, index| %>
+  <p data-step=<%= index+1 %> class="step hide"><%= step.action %></p>
 <% end %>
+</div>
 
-<!-- do an if statement thing? with css classes where one is hidden and one is not, and an onClick that toggles the classes so it hides the full pattern bit or the ajax bit that will cycle through steps. -->
+<button class="btn btn-show-all">Entire Pattern</button>
 
-<p>Step One:<br>
-<%=  @pattern.steps[1].action %></p>
+<button class="btn">Next Step</button>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".step").first().removeClass("hide").addClass("show");
+
+  $(".btn").on("click", function(){
+    var lastShown = $(".show");
+    lastShown.next().removeClass("hide").addClass("show");
+    lastShown.removeClass("show").addClass("hide");
+  });
+
+  $(".btn-show-all").on('click', function(){
+    $(".step").removeClass("hide").addClass("show");
+  });
+});
+</script>
+
+<style type="text/css">
+  .hide {
+    display:none;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
