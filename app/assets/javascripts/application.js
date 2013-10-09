@@ -16,3 +16,30 @@
 //= require_tree .
 
 //= require cocoon
+
+$(document).ready(function() {
+
+  $(".step").first().show();
+
+  $(".btn-next-step").on("click", function(){
+    var lastShown = $(".step:visible");
+    $(lastShown).next().show();
+    $(lastShown).hide();
+  });
+
+  $(".btn-show-all").on('click', function(){
+    $(".step").show();
+    $(".showPattern").toggle();
+  });
+
+  $(".btn-hide-all").on('click', function(){
+    $(".step").hide();
+    $(".step").first().show();
+  });
+
+  $(".btn-previous-step").on("click", function(){
+    var currentStep = $(".step:visible");
+    $(currentStep).prev().show();
+    $(currentStep).hide();
+  });
+});

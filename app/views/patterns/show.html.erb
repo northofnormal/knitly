@@ -6,37 +6,25 @@ Gauge: <%= @pattern.gauge %></p>
 
 <div id="full_pattern">
 <% @pattern.steps.each_with_index do |step, index| %>
-  <p data-step=<%= index+1 %> class="step hide"><%= step.action %></p>
+  <div data-step="<%= index+1 %>" class="step" style="display: none;">
+    <p><%= step.action %></p>
+  </div>
 <% end %>
 </div>
 
-<button class="btn btn-show-all">Entire Pattern</button>
+<div class="showPattern">
+<button class="btn btn-show-all">Show Pattern</button>
+</div>
+<div class="showPattern" style="display:none;">
+<button class="btn btn-hide-all">Hide Pattern</button>
+</div>
 
-<button class="btn">Next Step</button>
+<div>
+<button class="btn btn-next-step">Next Step</button>
+</div>
+<div style="display:none;">
+<button class="btn btn-previous-step">Previous Step</button>
+</div>
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-  $(".step").first().removeClass("hide").addClass("show");
 
-  $(".btn").on("click", function(){
-    var lastShown = $(".show");
-    lastShown.next().removeClass("hide").addClass("show");
-    lastShown.removeClass("show").addClass("hide");
-  });
-
-  $(".btn-show-all").on('click', function(){
-    $(".step").removeClass("hide").addClass("show");
-  });
-});
-</script>
-
-<style type="text/css">
-  .hide {
-    display:none;
-  }
-
-  .show {
-    display: block;
-  }
-</style>
