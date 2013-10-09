@@ -14404,3 +14404,135 @@ Processing by PatternsController#index as JSON
   [1m[36mPattern Load (0.4ms)[0m  [1mSELECT "patterns".* FROM "patterns"[0m
   [1m[35mStep Load (0.5ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1  [["pattern_id", 1]]
 Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/patterns/1" for 127.0.0.1 at 2013-10-09 12:21:46 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPattern Load (0.7ms)[0m  [1mSELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mStep Load (0.7ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1  [["pattern_id", 1]]
+  Rendered patterns/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 352ms (Views: 348.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/pattern.css?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/pattern.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-09 12:21:47 -0400
+
+
+Started GET "/patterns/1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPattern Load (0.8ms)[0m  [1mSELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mStep Load (0.7ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1  [["pattern_id", 1]]
+  Rendered patterns/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/pattern.css?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/pattern.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:24 -0400
+
+
+Started GET "/patterns/1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPattern Load (0.6ms)[0m  [1mSELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mStep Load (0.7ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1  [["pattern_id", 1]]
+  Rendered patterns/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/pattern.css?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/pattern.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-09 12:22:49 -0400
+
+
+Started GET "/patterns/1" for 127.0.0.1 at 2013-10-09 12:25:11 -0400
+Processing by PatternsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPattern Load (0.6ms)[0m  [1mSELECT "patterns".* FROM "patterns" WHERE "patterns"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mStep Load (0.6ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."pattern_id" = $1  [["pattern_id", 1]]
+  Rendered patterns/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/pattern.css?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/pattern.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-09 12:25:12 -0400

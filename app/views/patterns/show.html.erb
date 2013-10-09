@@ -5,8 +5,10 @@ Needles: <%= @pattern.needles %><br>
 Gauge: <%= @pattern.gauge %></p>
 
 <% @pattern.steps.each do |step| %>
-  <p><%= step.order %><br>
-     <%= step.action %></p>
+  <p><%= step.action %></p>
 <% end %>
 
 <!-- do an if statement thing? with css classes where one is hidden and one is not, and an onClick that toggles the classes so it hides the full pattern bit or the ajax bit that will cycle through steps. -->
+
+<p>Step One:<br>
+<%=  @pattern.steps[1].action %></p>
