@@ -64,10 +64,6 @@ $(document).ready(function() {
         count++;
         var lastShown = $(".step:visible");
         $('.count').text(count)
-        // if count  == $(lastShown).next(.position? << how do I access that data? ) {
-        //  $(lastShown).next().show();
-        //  $(lastShown).hide();
-        // };
     });
 });
 
