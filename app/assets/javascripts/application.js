@@ -65,5 +65,11 @@ $(document).ready(function() {
         var lastShown = $(".step:visible");
         $('.count').text(count)
     });
+
+   $('.btn-decrease').click(function () {
+   		var currentStep = $(".step:visible");
+   		count--;
+   		$('.count').text(count)
+   });
 });
 
