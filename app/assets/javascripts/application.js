@@ -19,37 +19,55 @@
 
 $(document).ready(function() {
 
+  function toggleSteps() {
+    $(".btn-previous-step").toggle();
+    $(".btn-next-step").toggle();
+  };
+
   $(".step").first().show();
 
   $(".btn-show-all").on('click', function(){
     $(".step").show();
     $(".showPattern").toggle();
+    toggleSteps();
   });
 
   $(".btn-hide-all").on('click', function(){
     $(".step").hide();
     $(".step").first().show();
     $(".showPattern").toggle();
+    toggleSteps();
   });
 
   $(".btn-next-step").on("click", function(){
     var lastShown = $(".step:visible");
-    $(lastShown).next().show();
+    var nextStep = $(lastShown).next();
+    if (nextStep.length == 0){
+      return;
+    };
+    nextStep.show();
     $(lastShown).hide();
   });
 
   $(".btn-previous-step").on("click", function(){
     var currentStep = $(".step:visible");
-    $(currentStep).prev().show();
+    var prevStep = $(currentStep).prev();
+    if (prevStep.length == 0){
+      return;
+    };
+    prevStep.show();
     $(currentStep).hide();
   });
 
    var count = 0;
-    $('.btn-increment').click(function (e) {
-        e.preventDefault();
+    $('.btn-increment').click(function () {
         count++;
-        console.log(count)
+        var lastShown = $(".step:visible");
         $('.count').text(count)
+        // if count  == $(lastShown).next(.position? << how do I access that data? ) {
+        //  $(lastShown).next().show();
+        //  $(lastShown).hide();
+        // };
     });
 });
 
