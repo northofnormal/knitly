@@ -45,11 +45,16 @@ $(document).ready(function() {
   });
 
    var count = 0;
-    $('.btn-increment').click(function (e) {
-        e.preventDefault();
+    $('.btn-increment').click(function () {
         count++;
-        console.log(count)
+        var lastShown = $(".step:visible");
         $('.count').text(count)
     });
+
+   $('.btn-decrease').click(function () {
+   		var currentStep = $(".step:visible");
+   		count--;
+   		$('.count').text(count)
+   });
 });
 
