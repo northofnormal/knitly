@@ -1,6 +1,8 @@
 Knitly::Application.routes.draw do
 
-  resources :patterns
+  resources :patterns do
+    resources :steps 
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
