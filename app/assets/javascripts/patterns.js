@@ -13,7 +13,6 @@ $(document).ready(function() {
   $(".btn-show-all").on('click', function(){
     $(".step").show();
     $(".showPattern").toggle();
-    toggleSteps();
   });
 
   $(".btn-hide-all").on('click', function(){
@@ -79,3 +78,5 @@ $(document).ready(function() {
     });
   });
 });
+
+// make the counter reset to zero at each new step and then count up again
