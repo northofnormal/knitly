@@ -25,8 +25,10 @@ class PatternsController < ApplicationController
   def show
   	@pattern = Pattern.find(params[:id])
 
-    # @step_number = params[:step_number]
-
+    respond_to do |format|
+      format.html
+      format.json { render json: @pattern.to_json(:include => :steps)}
+    end
   end
 
   private

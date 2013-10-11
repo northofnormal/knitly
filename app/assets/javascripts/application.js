@@ -19,6 +19,8 @@
 
 $(document).ready(function() {
 
+  var count = 0;
+
   function toggleSteps() {
     $(".btn-previous-step").toggle();
     $(".btn-next-step").toggle();
@@ -36,7 +38,6 @@ $(document).ready(function() {
     $(".step").hide();
     $(".step").first().show();
     $(".showPattern").toggle();
-    toggleSteps();
   });
 
   $(".btn-next-step").on("click", function(){
@@ -59,12 +60,27 @@ $(document).ready(function() {
     $(currentStep).hide();
   });
 
-   var count = 0;
     $('.btn-increment').click(function () {
+      // be consistent--change this to onClick
         count++;
         var lastShown = $(".step:visible");
         $('.count').text(count)
+        if (count === 1) {
+          var nextStep = $(lastShown).next();
+          nextStep.show();
+          $(lastShown).hide();
+        }
+        else if (count === 6) {
+          var nextStep = $(lastShown).next();
+          nextStep.show();
+          $(lastShown).hide();
+        }
+        else {
+          return;
+        };
     });
+
+    // 
 
    $('.btn-decrease').click(function () {
    		var currentStep = $(".step:visible");
@@ -72,4 +88,3 @@ $(document).ready(function() {
    		$('.count').text(count)
    });
 });
-

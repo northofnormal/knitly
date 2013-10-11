@@ -11,10 +11,12 @@ Gauge: <%= @pattern.gauge %></p>
   </div>
 <% end %>
 </div>
-<div "next-step">
-<button class="btn btn-next-step">Next Step</button>
+<div class="counter">
+  <p><span class="count">0</span><button class="btn btn-increment">+</button>
+  <button class="btn btn-decrease">-</button> </p>
 </div>
-<div "previous-step">
+<div>
+<button class="btn btn-next-step">Next Step</button>
 <button class="btn btn-previous-step">Previous Step</button>
 </div>
 <div class="showPattern">
@@ -23,7 +25,5 @@ Gauge: <%= @pattern.gauge %></p>
 <div class="showPattern" style="display:none;">
 <button class="btn btn-hide-all">Hide Pattern</button>
 </div>
-<div class="counter">
-  <p><span class="count">0</span><button class="btn btn-increment">+</button> </p>
-  <button class="btn btn-decrease">-</button> </p>
-</div>
+
+
