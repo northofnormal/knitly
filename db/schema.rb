@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131007203020) do
+ActiveRecord::Schema.define(version: 20131011154932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20131007203020) do
     t.integer  "pattern_id"
     t.integer  "order"
     t.text     "action"
-    t.string   "position"
+    t.float    "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

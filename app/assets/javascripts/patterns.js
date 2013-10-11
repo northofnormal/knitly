@@ -24,12 +24,13 @@ $(document).ready(function() {
 
   $(".btn-next-step").on("click", function(){
     var lastShown = $(".step:visible");
-    var nextStep = $(lastShown).next();
+    nextStep = $(lastShown).next();
     if (nextStep.length == 0){
       return;
     };
     nextStep.show();
     $(lastShown).hide();
+    knitlyStep++;
   });
 
   $(".btn-previous-step").on("click", function(){
@@ -40,39 +41,41 @@ $(document).ready(function() {
     };
     prevStep.show();
     $(currentStep).hide();
+    knitlyStep--;
   });
 
-    $('.btn-increment').click(function () {
-      // be consistent--change this to onClick
-        knitlyCount++;
+  $('.btn-increment').on("click", function () {
+    knitlyCount++;
+    $('.count').text(knitlyCount);
+
+    $.getJSON(location.pathname + "/steps/" + knitlyStep, function(json) {
+      var stepJSON = json;
+
+      if (knitlyCount > stepJSON.position) {
         var lastShown = $(".step:visible");
-        $('.count').text(knitlyCount);
-
-        // make an ajax request, get the current step, get the next step 
-        $.getJSON(location.pathname + "/" + "steps/" + knitlyStep, function(data) {
-          console.log(data);
-
-          // every time it's click ++ the knitlyStep? 
-        });
-
-        // if (knitlyCount === 1) {
-        //   var nextStep = $(lastShown).next();
-        //   nextStep.show();
-        //   $(lastShown).hide();
-        // }
-        // else if (knitlyCount === 6) {
-        //   var nextStep = $(lastShown).next();
-        //   nextStep.show();
-        //   $(lastShown).hide();
-        // }
-        // else {
-        //   return;
-        // };
+        var nextStep = $(lastShown).next();
+        nextStep.show();
+        $(lastShown).hide();
+        knitlyStep++;
+      };
     });
+  });
 
-   $('.btn-decrease').click(function () {
-      var currentStep = $(".step:visible");
-      knitlyCount--;
-      $('.count').text(knitlyCount)
-   });
+  $('.btn-decrease').on("click", function () {
+    var currentStep = $(".step:visible");
+    knitlyCount--;
+    $('.count').text(knitlyCount)
+
+    $.getJSON(location.pathname + "/steps/" + knitlyStep, function(json) {
+    var stepJSON = json;
+
+      if (knitlyCount < stepJSON.position) {
+        var lastShown = $(".step:visible");
+        var prevStep = $(lastShown).prev();
+        prevStep.show();
+        $(lastShown).hide();
+        knitlyStep--;
+      };
+    });
+  });
 });
