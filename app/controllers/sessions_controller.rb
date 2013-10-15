@@ -3,12 +3,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = login(params[:username], params[:email], params[:password], params[:remember_me])
+    user = login(params[:username], params[:password], params[:remember_me])
     
     if user
-      redirect_back_or_to root_url :notice => "Welcome back!"
+      redirect_to patterns_path :notice => "Welcome back!"
     else 
       flash.now.alert = "Username or password is incorrect"
+      render :new
     end
   end
 
