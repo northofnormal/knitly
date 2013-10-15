@@ -1,6 +1,6 @@
 Knitly::Application.routes.draw do
 
-  root to: "patterns#index"
+  root to: "public#welcome"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
