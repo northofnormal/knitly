@@ -16,7 +16,6 @@ $(document).ready(function() {
     nextStep.show();
     $(lastShown).hide();
     knitlyStep++;
-    console.log("one more times!")
   };
 
   showFirst();
