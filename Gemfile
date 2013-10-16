@@ -12,6 +12,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'sorcery'
 gem 'simple_form'
 gem 'cocoon'
+gem 'bourbon'
+gem 'neat'
+
+
 
 group :doc do
   gem 'sdoc', require: false
