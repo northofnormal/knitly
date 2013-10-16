@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'sorcery'
 gem 'simple_form'
 gem 'cocoon'
+gem 'compass-rails'
+gem 'zurb-foundation', '~>4.0.0'
 
 group :doc do
   gem 'sdoc', require: false
