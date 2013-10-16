@@ -9,7 +9,7 @@ class StepsController < ApplicationController
   end
 
   def show
-    @step = @pattern.steps.find(params[:id])
+    @step = @pattern.steps.find_by_order(params[:order])
 
     respond_to do |format|
       format.json { render json: @step }

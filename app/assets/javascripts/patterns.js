@@ -1,21 +1,27 @@
 $(document).ready(function() {
 
-  var knitlyCount = 0;
+  var knitlyCount = 1;
   var knitlyStep = 1;
+
+  function resetCounter() {
+    knitlyCount = 1;
+    $('.count').text(knitlyCount);
+  };
 
   function showFirst() {
     $(".step").first().show();  
-  }
+  };
 
-  function nextStep() {
-    var lastShown = $(".step:visible");
-    var nextStep = $(lastShown).next();
+  function goToNextStep() {
+    var currentStep = $(".step:visible");
+    var nextStep = $(currentStep).next();
     if (nextStep.length == 0) {
       return;
-    };
+    }; 
     nextStep.show();
-    $(lastShown).hide();
+    $(currentStep).hide();
     knitlyStep++;
+    resetCounter();
   };
 
   showFirst();
@@ -32,33 +38,36 @@ $(document).ready(function() {
   });
 
   $(".btn-next-step").on("click", function(){
-    nextStep();
+    goToNextStep();
   });
 
   $(".btn-previous-step").on("click", function(){
-    var lastShown = $(".step:visible");
-    var prevStep = $(lastShown).prev();
+    var currentStep = $(".step:visible");
+    var prevStep = $(currentStep).prev();
     if (prevStep.length == 0){
       return;
     };
     prevStep.show();
-    $(lastShown).hide();
+    $(currentStep).hide();
     knitlyStep--;
+    resetCounter();
   });
 
   $('.btn-increment').on("click", function () {
     $.getJSON(location.pathname + "/steps/" + knitlyStep, function(json) {
       var stepJSON = json;
       knitlyCount++;
-      $('.count').text(knitlyCount);
       if (knitlyCount > stepJSON.position) {
-        nextStep();
+        goToNextStep();
+      }
+      else { 
+        $('.count').text(knitlyCount);
       };
     });
   });
 
   $('.btn-decrease').on("click", function () {
-    var lastShown = $(".step:visible");
+    var currentStep = $(".step:visible");
     knitlyCount--;
     $('.count').text(knitlyCount)
 
@@ -66,14 +75,12 @@ $(document).ready(function() {
     var stepJSON = json;
 
       if (knitlyCount < stepJSON.position) {
-        var lastShown = $(".step:visible");
-        var prevStep = $(lastShown).prev();
+        var currentStep = $(".step:visible");
+        var prevStep = $(currentStep).prev();
         prevStep.show();
-        $(lastShown).hide();
+        $(currentStep).hide();
         knitlyStep--;
       };
     });
   });
 });
-
-// make the counter reset to zero at each new step and then count up again
