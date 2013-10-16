@@ -74,7 +74,7 @@ $(document).ready(function() {
     $.getJSON(location.pathname + "/steps/" + knitlyStep, function(json) {
     var stepJSON = json;
 
-      if (knitlyCount < stepJSON.position) {
+    if (knitlyCount < stepJSON.position) {
         var currentStep = $(".step:visible");
         var prevStep = $(currentStep).prev();
         prevStep.show();

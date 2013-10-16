@@ -15,8 +15,6 @@ gem 'cocoon'
 gem 'bourbon'
 gem 'neat'
 
-
-
 group :doc do
   gem 'sdoc', require: false
 end
