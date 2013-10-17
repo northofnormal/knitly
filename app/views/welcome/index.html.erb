@@ -1,7 +1,16 @@
-<h1>Knitly!</h1>
-
-<p>Welcome to Knitly!</p>
-
-<p>Please <%= link_to "Log In", login_url %> or <%= link_to "Sign Up", signup_url %></p>
-
-<div id="homepageLlama"><%= image_tag "leftllama.png" %></div>
+<div id="banner">
+  <div id="homeKnitly">
+    <h1>Knitly!</h1>
+  </div>
+  <div id="llamaWrap">
+    <%= image_tag "knitlythellamabig.png" %>
+  </div>
+</div>
+<div id="homeButtons">
+  <div class="homeButtonsBox">
+    <button class="green-sea-flat-button"><%= link_to "Log In", login_url %></button>
+  </div>
+  <div class="homeButtonsBox">
+    <button class="green-sea-flat-button"><%= link_to "Sign Up", signup_url %></button>
+  </div>
+</div>

@@ -1,5 +1,10 @@
-<h1>Lookit All These patterns!</h1>
-<% @pattern.each do |pattern| %>
-  <p><%= link_to pattern.title, pattern %></p>
-<% end %>
-<div class="btn"><%= link_to "Add a pattern", new_pattern_path %></div>
+<div id="patternContainer">
+  <div class="pattern">
+    <h1>Pattern Collection</h1>
+    <% @pattern.each do |pattern| %>
+      <p><%= link_to pattern.title, pattern %></p>
+    <% end %>
+    <button class="addPattern"><%= link_to "Add a pattern", new_pattern_path %></button>
+  </div>
+  <div class="bottomllama"><%= image_tag "makeoneofthesellama.png" %></div>
+</div>

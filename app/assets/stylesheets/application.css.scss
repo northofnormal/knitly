@@ -11,10 +11,14 @@
  *= require_self
  *= require normalize
  *= require pattern
+ *= require welcome
+ *= require sessions
+ *= require pattern
  */
 
 @import "bourbon";
 @import "neat";
 @import "home";
 @import "users";
+@import url(http://fonts.googleapis.com/css?family=Short+Stack);
 

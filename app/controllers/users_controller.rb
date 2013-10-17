@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root_url, :notice => "Welcome to Knitly!"
+      auto_login(@user)
+      redirect_to patterns_url, :notice => "Welcome to Knitly!"
     else 
       render :new
     end

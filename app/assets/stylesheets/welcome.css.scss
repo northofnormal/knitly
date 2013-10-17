@@ -1,3 +1,67 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#banner {
+ /* @include span-columns(12) */
+}
+
+#llamaWrap {
+  width: 300px;
+  padding-top: 13px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
+  max-width: 100%;
+}
+
+#banner {
+  background-color: #3498db;
+  text-align: center;
+  min-height: 250px;
+}
+
+#homeKnitly h1 {
+  font-family: 'Short Stack', cursive;
+  color: #ecf0f1;
+  font-size: 75px;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+#llamaWrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.green-sea-flat-button {
+  width: 300px;
+  position: relative;
+  vertical-align: top;
+  height: 60px;
+  padding: 10px;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #16a085;
+  border: 1px;
+  border-bottom: 3px solid #14947b;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 -2px #14947b;
+  box-shadow: inset 0 -2px #14947b;
+}
+
+.green-sea-flat-button a {
+  text-decoration: none;
+}
+
+#homeButtons {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.homeButtonsBox {
+  margin: 10px;
+}

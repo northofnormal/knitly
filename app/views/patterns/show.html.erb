@@ -1,31 +1,52 @@
-<h1><%= @pattern.title %></h1>
-<p><%= link_to "back to patterns", patterns_url %></p>
-
-<p><%= @pattern.description %></p>
-<p>Yarn: <%= @pattern.yarn %><br>
-Needles: <%= @pattern.needles %><br>
-Gauge: <%= @pattern.gauge %></p>
-
-<div id="full_pattern">
-<% @pattern.steps.each_with_index do |step, index| %>
-  <div data-step="<%= index+1 %>" class="step" style="display: none;">
-    <p><%= step.action %></p>
+<div id="patternContainer">
+  <div class="pattern">
+    <h1><%= @pattern.title %></h1>
   </div>
-<% end %>
-</div>
-<div class="counter">
-  <p><span class="count">0</span><button class="btn btn-increment">+</button>
-  <button class="btn btn-decrease">-</button> </p>
-</div>
-<div>
-<button class="btn btn-next-step">Next Step</button>
-<button class="btn btn-previous-step">Previous Step</button>
-</div>
-<div class="showPattern">
-<button class="btn btn-show-all">Show Pattern</button>
-</div>
-<div class="showPattern" style="display:none;">
-<button class="btn btn-hide-all">Hide Pattern</button>
-</div>
+
+  <p><%= link_to "back to patterns", patterns_url %></p>
+
+  <p><%= @pattern.description %></p>
+  <table class="patternInfo">
+    <tr>
+      <th colspan=2>The Details:</th>
+    </tr>
+    <tr>
+      <td>Yarn:</td>
+      <td><%= @pattern.yarn %></td>
+    </tr>
+    <tr>
+      <td>Needles:</td>
+      <td><%= @pattern.needles %></td>
+    </tr>
+    <tr>
+      <td>Gauge:</td>
+      <td><%= @pattern.gauge %></td>
+    </tr>
+  </table>
 
 
+  <div id="full_pattern">
+    <% @pattern.steps.each_with_index do |step, index| %>
+      <div data-step="<%= index+1 %>" class="step" style="display: none;">
+          <p><%= step.action %></p>
+      </div>
+    <% end %>
+  </div>
+    <div class="incrementer">
+      <p><button class="btn btn-decrease">-</button> <span class="count">0</span><button class="btn btn-increment">+</button>
+      </p>
+    </div>
+
+    <div>
+    <button class="skip btn-next-step">Next Step</button>
+    <button class="skip btn-previous-step">Previous Step</button>
+    </div>
+
+    <div class="showPattern">
+    <button class="full btn-show-all">Show Pattern</button>
+    </div>
+    
+    <div class="showPattern" style="display:none;">
+    <button class="full btn-hide-all">Hide Pattern</button>
+    </div>
+</div>

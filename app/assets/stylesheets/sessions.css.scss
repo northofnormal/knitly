@@ -1,3 +1,40 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.field {
+  margin: 5px;
+}
+
+.loginKnitly h1 {
+  font-family: 'Short Stack', cursive;
+  color: #34495e;
+  font-size: 25px;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.loginbtn {
+  width: 50%;
+}
+
+.Center-Container {
+  position: relative;
+}
+
+.container {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  border: 5px solid #3498db;
+  width: 85%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0; 
+  padding: 5px;
+}
+
+.container.is-Fixed {
+  position: fixed;
+  z-index: 999;
+}

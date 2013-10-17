@@ -1,20 +1,47 @@
-<h1>Create a new pattern</h1>
-<div class="form">
-<%= simple_form_for @pattern do |x|  %>
-	<%= x.label :title %>: <%= x.text_field :title %><br>
-	<%= x.label :description %>: <%= x.text_area :description %><br>
-	<%= x.label :gauge %>: <%= x.text_field :gauge %><br>
-	<%= x.label :needles %>: <%= x.text_field :needles %><br>
-	<%= x.label :yarn %>: <%= x.text_field :yarn %>
-
-	<h3>Steps</h3>
-	<%= x.simple_fields_for :steps do |step| %>
-		<%= render 'step_fields', :f => step %>
-  <% end %>
-		<div class="links">
-			<%= link_to_add_association 'add a step', x, :steps %>
+<div id="patternContianer">
+	<div class="form">
+		<div class="pattern">
+			<h1>Add a pattern</h1>
 		</div>
-  <%= x.submit %>
+		<%= simple_form_for @pattern do |x|  %>
+			<div class="field">
+				<%= x.label :title %>:<br>
+				<%= x.text_field :title %>
+			</div>
+			
+			<div class="field">
+				<%= x.label :description %>:<br>
+				<%= x.text_area :description %><br>
+			</div>
 
-<% end  %>
+			<div class="field">
+				<%= x.label :gauge %>:<br>
+				<%= x.text_field :gauge %><br>
+			</div>
+			
+			<div class="field">
+				<%= x.label :needles %>:<br>
+				<%= x.text_field :needles %><br>
+			</div>
+			
+			<div class="field">
+				<%= x.label :yarn %>:<br>
+				<%= x.text_field :yarn %>
+			</div>
+
+			<div class="pattern">
+				<h3>Steps</h3>
+			</div>
+
+			<div class="links">
+				<%= link_to_add_association 'add a step', x, :steps %>
+			</div>
+			<%= x.simple_fields_for :steps do |step| %>
+				<%= render 'step_fields', :f => step %>
+		  <% end %>
+		  <div class="submit">
+		  <%= x.submit "Add Pattern" %>
+		  </div>
+		<% end  %>
+	</div>
 </div>
