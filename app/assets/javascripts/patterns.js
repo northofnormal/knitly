@@ -16,7 +16,8 @@ $(document).ready(function() {
     var currentStep = $(".step:visible");
     var nextStep = $(currentStep).next();
     if (nextStep.length == 0) {
-      return;
+      $('.bottomllama').toggle();
+      return
     }; 
     nextStep.show();
     $(currentStep).hide();
