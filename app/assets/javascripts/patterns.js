@@ -57,7 +57,7 @@ $(document).ready(function() {
   $('.btn-increment').on("click", function () {
     $.getJSON(location.pathname + "/steps/" + knitlyStep, function(json) {
       var stepJSON = json;
-      if (knitlyCount > stepJSON.position) {
+      if (knitlyCount >= stepJSON.position) {
         goToNextStep();
       }
       else { 
