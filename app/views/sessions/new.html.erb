@@ -1,10 +1,5 @@
-<div class="Center-Container">
-  <div class="container">
-    <div class="loginKnitly">
-    </div>
-    <div class="loginllama">
-      <%= image_tag "loginllama.png" %>
-    </div>
+<div class="formFrame">
+  <div id="loginForm">
     <%= form_tag sessions_path do %>
       <div class="field">
         <%= label_tag :username %><br>
@@ -17,11 +12,13 @@
       <div class="field">
         <%= label_tag :remember_me %>
         <%= check_box_tag :remember_me, 1, params[:remember_me] %>
-        <div class="loginbtn">
-          <%= submit_tag "Log in" %>
-        </div>
       </div>
-
+      <div class="loginbtn">
+        <%= submit_tag "Log in" %>
+      </div>
     <% end %>
   </div>
+</div>
+<div class="loginllama">
+  <%= image_tag "loginllama.png" %>
 </div>

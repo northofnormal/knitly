@@ -1,7 +1,7 @@
 
 #patternContainer {
   border-radius: 5px;
-  width: 80%;
+  width: 60%;
   padding: 5px;
   margin: 0 auto;
 }
@@ -44,20 +44,21 @@
   margin-top: 1px;
 }
 
-.patternInfo {
+
+.patternTable {
   border:1px solid #3498db;
   border-radius: 15px;
-  width: 75%;
+  width: 50%;
   font-size: 12px;
 }
 
-.patternInfo th {
+.patternTable th {
   text-align: left;
   background-color: #3498db;
   border:1px solid #3498db;
 }
 
-.patternInfo td {
+.patternTable td {
   border:1px solid #3498db;
 }
 
@@ -145,10 +146,7 @@
 }
 
 .form {
-  background-color: #ecf0f1;
-  border-radius: 5px;
-  border: 5px solid #3498db;
-  overflow: auto;
+  width: 50%;
   margin: 0 auto;
   margin-top: 10px;
   padding: 5px;
@@ -163,9 +161,23 @@
 }
 
 .submit {
-  float: right;
+  margin-left: 50%;
 }
 
 .patternfield {
   
 }
+
+.buttonsSection {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.links {
+  margin-left: 25px;
+}
+
+.patternForm {
+  margin-right: 25px;
+}
+
