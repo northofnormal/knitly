@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = login(params[:username], params[:password], params[:remember_me])
     
     if user
-      redirect_to patterns_path :notice => "Welcome back!"
+      redirect_back_or_to patterns_path :notice => "Welcome back!"
     else 
       flash.now.alert = "Username or password is incorrect"
       render :new

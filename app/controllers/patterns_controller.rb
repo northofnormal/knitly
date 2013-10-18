@@ -1,4 +1,6 @@
-class PatternsController < ApplicationController
+class PatternsController < ApplicationController  
+  before_filter :require_login
+
   def new
   	@pattern = Pattern.new
   end

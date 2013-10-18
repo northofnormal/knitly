@@ -1,13 +1,15 @@
 Knitly::Application.routes.draw do
-
-  root to: "welcome#index"
+  
+  root to: "patterns#index"
   get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
+  get "login" => "welcome#index", :as => "login"
+  get "welcome" => "sessions#new", :as => "welcome" 
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
   get "sessions/new"
   get "users/new"
+
   resources :patterns do
     resources :steps, param: :order
   end
