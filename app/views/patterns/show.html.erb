@@ -2,6 +2,7 @@
 
   <div class="pattern">
     <h1><%= @pattern.title %></h1>
+    <p><%= button_to "Delete Pattern", @pattern, :method=>:delete, :class=>:destroy %></p>
   </div>
 
     <p><%= @pattern.description %></p>

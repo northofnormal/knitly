@@ -29,8 +29,15 @@ class PatternsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @pattern.to_json(:include => :steps)}
+      format.json { render json: @pattern.to_json(:include => :steps) }
     end
+  end
+
+  def destroy
+    @pattern = Pattern.find(params[:id])
+    @pattern.destroy
+
+    redirect_to patterns_path
   end
 
   private
