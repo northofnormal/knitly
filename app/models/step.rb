@@ -1,5 +1,5 @@
 class Step < ActiveRecord::Base
-	belongs_to :pattern
+	belongs_to :size
 
 	validates :order, presence: true
 	validates :action, presence: true
