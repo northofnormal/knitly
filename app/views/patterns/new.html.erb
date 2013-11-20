@@ -3,48 +3,48 @@
 		<h1>Add a pattern</h1>
 	</div>
 	<div class="form">
+		<%= simple_form_for @pattern do |f|  %>
+			<div class="patternForm">
+				<div class="patternfield">
+					<%= f.label :title %>:<br>
+					<%= f.text_field :title %>
+				</div>
+				
+				<div class="patternfield">
+					<%= f.label :description %>:<br>
+					<%= f.text_area :description %><br>
+				</div>
 
-		<div class="patternForm">
-		<%= simple_form_for @pattern do |x|  %>
-			<div class="patternfield">
-				<%= x.label :title %>:<br>
-				<%= x.text_field :title %>
+				<div class="patternfield">
+					<%= f.label :gauge %>:<br>
+					<%= f.text_field :gauge %><br>
+				</div>
+				
+				<div class="patternfield">
+					<%= f.label :needles %>:<br>
+					<%= f.text_field :needles %><br>
+				</div> 
+				
+				<div class="patternfield">
+					<%= f.label :yarn %>:<br>
+					<%= f.text_field :yarn %>
+				</div>
 			</div>
-			
-			<div class="patternfield">
-				<%= x.label :description %>:<br>
-				<%= x.text_area :description %><br>
-			</div>
-
-			<div class="patternfield">
-				<%= x.label :gauge %>:<br>
-				<%= x.text_field :gauge %><br>
-			</div>
-			
-			<div class="patternfield">
-				<%= x.label :needles %>:<br>
-				<%= x.text_field :needles %><br>
-			</div> 
-			
-			<div class="patternfield">
-				<%= x.label :yarn %>:<br>
-				<%= x.text_field :yarn %>
-			</div>
-		</div>
 			<div class="pattern">
 				<h3>Steps</h3>
-			
 
-			<div class="links">
-				<%= link_to_add_association 'add a step', x, :steps %>
+				<div id="steps">
+					<%= f.simple_fields_for :steps do |step| %>
+						<%= render 'step_fields', :f => step %>
+			  	<% end %>
+			  	<div class="links">
+						<%= link_to_add_association 'add a step', f, :steps %>
+					</div>
+			  	<div class="submit">
+			  		<%= f.submit "Add Pattern" %>
+			  	</div>
+			  </div>
 			</div>
-			<%= x.simple_fields_for :steps do |step| %>
-				<%= render 'step_fields', :f => step %>
-		  <% end %>
-		  </div>
-		  <div class="submit">
-		  <%= x.submit "Add Pattern" %>
-		  </div>
 		<% end  %>
 	</div>
 </div>
