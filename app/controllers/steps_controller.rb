@@ -1,5 +1,5 @@
 class StepsController < ApplicationController
-  before_action :fetch_pattern
+  before_action :fetch_size
 
   def index
 
@@ -18,7 +18,7 @@ class StepsController < ApplicationController
 
   private
 
-  def fetch_pattern
-    @pattern = Pattern.find(params[:pattern_id])
+  def fetch_size
+    @size = Size.find(params[:size_id])
   end
 end
