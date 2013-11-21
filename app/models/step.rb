@@ -1,5 +1,5 @@
 class Step < ActiveRecord::Base
-	belongs_to :size
+	belongs_to :version
 
 	validates :order, presence: true
 	validates :action, presence: true
