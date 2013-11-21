@@ -1,5 +1,5 @@
 class AddSizeColumnToSteps < ActiveRecord::Migration
   def change
-    add column :size_id
+    add_column :steps, :version_id, :integer
   end
 end
