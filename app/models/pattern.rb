@@ -2,6 +2,7 @@ class Pattern < ActiveRecord::Base
 	has_many :projects
 	has_many :versions
   accepts_nested_attributes_for :versions, :allow_destroy => true
+  
 
 	validates :title, presence: true
 	validates :description, presence: true

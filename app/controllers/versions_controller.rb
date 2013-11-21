@@ -1,4 +1,4 @@
-class SizeController < ApplicationController
+class VersionController < ApplicationController
   before_action :fetch_pattern
 
   def index
