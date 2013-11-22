@@ -1,5 +1,5 @@
 <div id="nested-fields">
-  <div class="field">
+  <div id="versions">
     <%= f.label :version, "* Size" %><br>
     <%= f.text_field :version %>
   </div>
@@ -10,7 +10,8 @@
     <%= f.simple_fields_for :steps do |step| %>
       <%= render 'step_fields', :f => step %>
     <% end %>
-  <div class="links">
-     <%= link_to_add_association 'add a step', f, :steps %>
+    <div class="links">
+       <%= link_to_add_association 'add a step', f, :steps %>
+    </div>
   </div>
 </div>

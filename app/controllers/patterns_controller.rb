@@ -43,6 +43,6 @@ class PatternsController < ApplicationController
   private
 
   def pattern_params
-    params.require(:pattern).permit(:title, :description, :gauge, :needles, :yarn, steps_attributes: [:id, :order, :position, :action, :_destroy])
+    params.require(:pattern).permit(:title, :description, :gauge, :needles, :yarn, {:versions_attributes => [:version, {:steps_attributes => [:id, :order, :position, :action, :_destroy]}, :_destroy]} )
   end
 end
