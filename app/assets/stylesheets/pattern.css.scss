@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+strong {
+  color: #34495e;
+}
+
 .bottomllama {
   position: fixed;
   bottom: 0px;
@@ -40,15 +44,14 @@
   font-family: 'Short Stack', cursive;
   color: #34495e;
   font-size: 40px;
-  margin-bottom: 10px;
-  margin-top: 1px;
-}
+  margin: 1px auto 10px auto;
 
+}
 
 .patternTable {
   border:1px solid #3498db;
   border-radius: 15px;
-  width: 50%;
+  width: 40%;
   font-size: 12px;
 }
 
@@ -181,3 +184,10 @@
   margin-right: 25px;
 }
 
+img {
+  margin-left: 40px;
+}
+
+.deleteButton {
+  margin: 10px 50px;
+}

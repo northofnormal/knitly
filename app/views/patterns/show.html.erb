@@ -2,12 +2,9 @@
 
   <div class="pattern">
     <h1><%= @pattern.title %></h1>
-    <p><%= button_to "Delete Pattern", @pattern, {:onclick => "return confirm('Are you sure? This pattern will be gone forever!')", :method=>:delete, :class=>:destroy} %></p>
   </div>
-
-<!-- ("Accept Post", {}, {:onclick => "return confirm('Are you sure?')", :method => :accept_question, :remote => true}) % -->
-
-    <p><%= @pattern.description %></p>
+  <div>
+    
     <table class="patternTable">
       <tr>
         <th colspan=2>The Details:</th>
@@ -25,19 +22,22 @@
         <td><%= @pattern.gauge %></td>
       </tr>
     </table>
-
+    <p><%= @pattern.description %></p>
+  </div>
   <div id="full_pattern">
     <% @pattern.steps.each_with_index do |step, index| %>
       <div data-step="<%= index+1 %>" class="step" style="display: none;">
-          <p><%= step.action %></p>
+          <p><strong>Step <%= index+1 %>: </strong><%= step.action %></p>
+          <img src="http://placekitten.com/200/140" />
       </div>
     <% end %>
   </div>
   <div>
     <div class="incrementer">
-      <p><button class="btn btn-increment">+</button>
+      <p>Count your rows:<br>
+        <button class="btn btn-increment">+</span></button>
         <span class="count">0</span>
-        <button class="btn btn-decrease">-</button> 
+        <button class="btn btn-decrease">-</span></button> 
       </p>
     </div>
 
@@ -52,6 +52,9 @@
     
     <div class="showPattern" style="display:none;">
       <button class="full btn-hide-all">Hide Pattern</button>
+    </div>
+
+    <div class="deleteButton"><%= button_to "Delete Pattern", @pattern, {:onclick => "return confirm('Are you sure? This pattern will be gone forever!')", :method=>:delete, :class=>:destroy} %>
     </div>
   </div>
 </div>
