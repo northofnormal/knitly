@@ -127,11 +127,8 @@
   margin-left: 25px;
 }
 
-#patternContainer {
-  border-radius: 5px;
-  width: 60%;
-  padding: 5px;
-  margin: 0 auto;
+.pattern {
+  padding: 5%;
 }
 
 .patternForm {
@@ -141,7 +138,7 @@
 .patternTable {
   border:1px solid #3498db;
   border-radius: 15px;
-  width: 40%;
+  width: 100%;
   font-size: 12px;
 }
 
@@ -167,6 +164,7 @@
   position: fixed;
   bottom: 0px;
   right: 0px;
+  width: 50%;
 }
 
 .stepImage {

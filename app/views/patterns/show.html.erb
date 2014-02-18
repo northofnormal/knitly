@@ -1,28 +1,32 @@
-<div id="patternContainer">
-
-  <div class="pattern">
-    <h1><%= @pattern.title %></h1>
+<div class="section group">
+  <div class="col span_5_of_5">
+    <div class="pattern">
+      <h1><%= @pattern.title %></h1>
+        <p><%= @pattern.description %></p>
+        <table class="patternTable">
+          <tr>
+            <th colspan=2>The Details:</th>
+          </tr>
+          <tr>
+            <td>Yarn:</td>
+            <td><%= @pattern.yarn %></td>
+          </tr>
+          <tr>
+            <td>Needles:</td>
+            <td><%= @pattern.needles %></td>
+          </tr>
+          <tr>
+            <td>Gauge:</td>
+            <td><%= @pattern.gauge %></td>
+          </tr>
+        </table>
+    </div>
   </div>
-  <div>
+</div>
+
+
     
-    <table class="patternTable">
-      <tr>
-        <th colspan=2>The Details:</th>
-      </tr>
-      <tr>
-        <td>Yarn:</td>
-        <td><%= @pattern.yarn %></td>
-      </tr>
-      <tr>
-        <td>Needles:</td>
-        <td><%= @pattern.needles %></td>
-      </tr>
-      <tr>
-        <td>Gauge:</td>
-        <td><%= @pattern.gauge %></td>
-      </tr>
-    </table>
-    <p><%= @pattern.description %></p>
+    
   </div>
   <div id="full_pattern">
     <% @pattern.steps.each_with_index do |step, index| %>

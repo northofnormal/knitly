@@ -1,10 +1,16 @@
-<div id="patternContainer">
-  <div class="pattern">
-    <h1>Pattern Collection</h1>
-    <% @pattern.each do |pattern| %>
-      <p><%= link_to pattern.title, pattern %></p>
-    <% end %>
-    <button class="addPattern"><%= link_to "Add a pattern", new_pattern_path %></button>
+<div class="section group"> 
+  <div class="col span_5_of_8">
+    <div class="pattern">
+      <h1>Pattern Collection</h1>
+        <% @pattern.each do |pattern| %>
+        <p><%= link_to pattern.title, pattern %></p>
+      <% end %>
+      <button class="addPattern"><%= link_to "Add a pattern", new_pattern_path %></button>
+    </div>
   </div>
-  <div class="bottomllama"><%= image_tag "makeoneofthesellama.png" %></div>
+
+  <div class="col span_3_of_8">
+      <%= image_tag "makeoneofthesellama.png" %>
+  </div>
 </div>
+
