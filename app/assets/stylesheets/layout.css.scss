@@ -1,3 +1,29 @@
+body {
+  background-color: #ecf0f1;
+}
+
+h1 {
+  font-family: 'Gabriela', serif;
+  color: #34495e;
+  font-size: 40px;
+  margin: 1px auto 10px auto;
+}
+
+h3 {
+  font-family: 'Gabriela', serif;
+  color: #34495e;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+p {
+  font-family: 'Varela Round', sans-serif;
+}
+
+strong {
+  color: #34495e;
+}
 
 #cssmenu ul,
 #cssmenu ul li,
@@ -49,19 +75,6 @@
   opacity: .9;
 }
 
-#cssmenu ul li a:hover,
-#cssmenu ul li.active a {
-  background: url(color.png) center bottom;
-  display: block;
-  height: 37px;
-  margin-top: 0px;
-  padding-top: 26px;
-  color: #004f7c;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.55);
-  opacity: 1;
-}
-
-
 #logollama {
   height: auto;
   z-index: 999;
@@ -70,3 +83,4 @@
   max-width: 100%;
   float: left;
 }
+

@@ -28,7 +28,7 @@
     <% @pattern.steps.each_with_index do |step, index| %>
       <div data-step="<%= index+1 %>" class="step" style="display: none;">
           <p><strong>Step <%= index+1 %>: </strong><%= step.action %></p>
-          <img src="http://placekitten.com/200/140" />
+          <img class="stepImage" src="http://placekitten.com/200/140" />
       </div>
     <% end %>
   </div>

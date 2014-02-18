@@ -8,7 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+ *= require_self 
  *= require normalize
  *= require pattern
  *= require welcome
@@ -17,23 +17,7 @@
  *= require layout
  */
 
-@import "bourbon";
-@import "neat";
 @import "home";
 @import "users";
 @import url(http://fonts.googleapis.com/css?family=Gabriela|Varela+Round);
 
-body {
-  background-color: #ecf0f1;
-}
-
-p {
-  font-family: 'Varela Round', sans-serif;
-}
-
-h1 {
-  font-family: 'Gabriela', serif;
-  color: #34495e;
-  font-size: 40px;
-  margin: 1px auto 10px auto;
-}

@@ -1,20 +1,4 @@
-
-#patternContainer {
-  border-radius: 5px;
-  width: 60%;
-  padding: 5px;
-  margin: 0 auto;
-}
-
-strong {
-  color: #34495e;
-}
-
-.bottomllama {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-}
+/* button styling */
 
 .addPattern {
   width: 100px;
@@ -34,33 +18,10 @@ strong {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 -2px #2980b9;
   box-shadow: inset 0 -2px #2980b9;
-  }
+}
 
 .addPattern a {
   text-decoration: none;
-}
-
-.patternTable {
-  border:1px solid #3498db;
-  border-radius: 15px;
-  width: 40%;
-  font-size: 12px;
-}
-
-.patternTable th {
-  text-align: left;
-  background-color: #3498db;
-  border:1px solid #3498db;
-}
-
-.patternTable td {
-  border:1px solid #3498db;
-}
-
-.step {
-  font-size: 16pt;
-  width: 70%;
-  margin: 0, auto;
 }
 
 .btn {
@@ -83,6 +44,11 @@ strong {
   box-shadow: inset 0 -2px #2980b9;
 }
 
+.buttonsSection {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .count {
   width: 50px;
   position: relative;
@@ -95,24 +61,8 @@ strong {
   border-radius: 5px;
 }
 
-.skip {
-  width: 100px;
-  position: relative;
-  vertical-align: top;
-  height: 30px;
-  padding: 3px;
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  background: #3498db;
-  border: 1px;
-  border-bottom: 3px solid #2980b9;
-  cursor: pointer;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 -2px #2980b9;
-  box-shadow: inset 0 -2px #2980b9;
+.deleteButton {
+  margin: 10px 50px;
 }
 
 .full {
@@ -140,6 +90,32 @@ strong {
   margin-left: 50px;
 }
 
+.skip {
+  width: 100px;
+  position: relative;
+  vertical-align: top;
+  height: 30px;
+  padding: 3px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #3498db;
+  border: 1px;
+  border-bottom: 3px solid #2980b9;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 -2px #2980b9;
+  box-shadow: inset 0 -2px #2980b9;
+}
+
+.submit {
+  margin-left: 50%;
+}
+
+/* page styling */
+
 .form {
   width: 50%;
   margin: 0 auto;
@@ -147,35 +123,52 @@ strong {
   padding: 5px;
 }
 
-.pattern h3 {
-  font-family: 'Gabriela', serif;
-  color: #34495e;
-  font-size: 20px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.submit {
-  margin-left: 50%;
-}
-
-.buttonsSection {
-  width: 50%;
-  margin: 0 auto;
-}
-
 .links {
   margin-left: 25px;
+}
+
+#patternContainer {
+  border-radius: 5px;
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .patternForm {
   margin-right: 25px;
 }
 
-img {
-  margin-left: 40px;
+.patternTable {
+  border:1px solid #3498db;
+  border-radius: 15px;
+  width: 40%;
+  font-size: 12px;
 }
 
-.deleteButton {
-  margin: 10px 50px;
+.patternTable th {
+  text-align: left;
+  background-color: #3498db;
+  border:1px solid #3498db;
+}
+
+.patternTable td {
+  border:1px solid #3498db;
+}
+
+.step {
+  font-size: 16pt;
+  width: 70%;
+  margin: 0, auto;
+}
+
+/* image styling */
+
+.bottomllama {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.stepImage {
+  margin-left: 40px;
 }
