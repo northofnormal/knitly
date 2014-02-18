@@ -1,7 +1,7 @@
 <div id="nested-fields">
   <div class="field">
     <%= f.label :order %>:<br>
-    <%= f.number_field :order %>
+    <%= f.number_field :order, :in => 0..9999 %>
   </div>
 
   <div class="field">
