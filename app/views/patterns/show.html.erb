@@ -2,8 +2,10 @@
 
   <div class="pattern">
     <h1><%= @pattern.title %></h1>
-    <p><%= button_to "Delete Pattern", @pattern, :confirm=>'Are you sure? This cannot be undone, and you will loose this pattern forever!', :method=>:delete, :class=>:destroy %></p>
+    <p><%= button_to "Delete Pattern", @pattern, {:onclick => "return confirm('Are you sure? This pattern will be gone forever!')", :method=>:delete, :class=>:destroy} %></p>
   </div>
+
+<!-- ("Accept Post", {}, {:onclick => "return confirm('Are you sure?')", :method => :accept_question, :remote => true}) % -->
 
     <p><%= @pattern.description %></p>
     <table class="patternTable">
